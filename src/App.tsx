@@ -48,6 +48,17 @@ function App() {
         "Criador de conteúdo audiovisual, transformando ideias em narrativas visuais impactantes.",
     },
   ];
+
+  // No início do seu arquivo, dentro do App() ou fora antes do return
+  const phoneNumber = "+5547996257974";
+
+  const redirectToWhatsApp = (message: string) => {
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {" "}
@@ -344,10 +355,16 @@ function App() {
                   </p>{" "}
                 </div>{" "}
                 {/* CTA Button */}{" "}
-                <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-                  {" "}
-                  Escolher Impulse Start{" "}
-                </button>{" "}
+                <button
+                  onClick={() =>
+                    redirectToWhatsApp(
+                      "Olá, me interessei no plano Impulse Start"
+                    )
+                  }
+                  className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+                >
+                  Escolher Impulse Start
+                </button>
               </div>{" "}
             </div>{" "}
             {/* Impulse Pro Package */}{" "}
@@ -515,10 +532,16 @@ function App() {
                   </p>{" "}
                 </div>{" "}
                 {/* CTA Button */}{" "}
-                <button className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25">
-                  {" "}
-                  Escolher Impulse Pro{" "}
-                </button>{" "}
+                <button
+                  onClick={() =>
+                    redirectToWhatsApp(
+                      "Olá, me interessei no plano Impulse Pro"
+                    )
+                  }
+                  className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25"
+                >
+                  Escolher Impulse Pro
+                </button>
               </div>{" "}
             </div>{" "}
             {/* Impulse Vision Package */}{" "}
@@ -703,7 +726,14 @@ function App() {
                   </p>{" "}
                 </div>{" "}
                 {/* CTA Button */}{" "}
-                <button className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+                <button
+                  onClick={() =>
+                    redirectToWhatsApp(
+                      "Olá, me interessei no plano Impulse Vision."
+                    )
+                  }
+                  className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
+                >
                   {" "}
                   Escolher Impulse Vision{" "}
                 </button>{" "}
@@ -718,10 +748,16 @@ function App() {
               Não sabe qual pacote escolher? Vamos conversar e encontrar a
               solução ideal para seu negócio.{" "}
             </p>{" "}
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-              {" "}
-              Falar com Especialista{" "}
-            </button>{" "}
+            <button
+              onClick={() =>
+                redirectToWhatsApp(
+                  "Olá, me interessei em falar com um especialista"
+                )
+              }
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+            >
+              Falar com Especialista
+            </button>
           </div>{" "}
         </div>{" "}
       </section>{" "}
@@ -760,10 +796,12 @@ function App() {
               <p className="text-slate-300">Rio do Sul, SC</p>{" "}
             </div>{" "}
           </div>{" "}
-          <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-            {" "}
-            Iniciar Projeto{" "}
-          </button>{" "}
+          <button
+            onClick={() => redirectToWhatsApp("Olá, desejo iniciar um projeto")}
+            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+          >
+            Iniciar Projeto
+          </button>
         </div>{" "}
       </section>{" "}
       {/* Footer */}{" "}
